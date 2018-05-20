@@ -26,7 +26,6 @@ import (
 	"testing"
 
 	"github.com/ory/ladon"
-	"github.com/ory/ladon/manager/memory"
 	"github.com/pborman/uuid"
 	"github.com/pkg/errors"
 )
@@ -74,7 +73,7 @@ func BenchmarkLadon(b *testing.B) {
 		b.Run(fmt.Sprintf("store=memory/policies=%d", num), func(b *testing.B) {
 			matcher := ladon.NewRegexpMatcher(4096)
 			benchmarkLadon(num, b, &ladon.Ladon{
-				Manager: memory.NewMemoryManager(),
+				Manager: ladon.NewMemoryManager(),
 				Matcher: matcher,
 			})
 		})

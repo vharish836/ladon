@@ -26,7 +26,6 @@ import (
 	"testing"
 
 	. "github.com/ory/ladon"
-	. "github.com/ory/ladon/manager/memory"
 	"github.com/stretchr/testify/assert"
 )
 

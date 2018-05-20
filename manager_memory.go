@@ -18,12 +18,11 @@
  * @license 	Apache-2.0
  */
 
-package memory
+package ladon
 
 import (
 	"sync"
 
-	. "github.com/ory/ladon"
 	"github.com/ory/pagination"
 	"github.com/pkg/errors"
 )
@@ -110,3 +109,5 @@ func (m *MemoryManager) FindRequestCandidates(r *Request) (Policies, error) {
 	}
 	return ps, nil
 }
+
+var DefaultManager = NewMemoryManager()

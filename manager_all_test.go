@@ -29,7 +29,6 @@ import (
 
 	. "github.com/ory/ladon"
 	"github.com/ory/ladon/integration"
-	. "github.com/ory/ladon/manager/memory"
 	. "github.com/ory/ladon/manager/sql"
 	"github.com/stretchr/testify/require"
 )
